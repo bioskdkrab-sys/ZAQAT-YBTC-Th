@@ -130,8 +130,8 @@
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-scale-balanced text-3xl text-accent"></i>
                     <div>
-                        <h1 class="text-2xl font-bold">ระบบคำนวณซะกาตทรัพย์สิน By YBTC TH</h1>
-                        <p class="text-primaryLight text-sm mt-1">ประเมินภาระจำยอมตามหลักศาสนาอิสลาม (ครอบคลุมบิทคอยน์ เหมาะสำหรับผู้ที่ต้องการจ่ายซะกาตด้วยบิทคอยน์)</p>
+                        <h1 class="text-2xl font-bold">ระบบคำนวณซะกาตทรัพย์สินครบรอบปีตามปฏิทินอิสลาม By YBTC TH</h1>
+                        <p class="text-primaryLight text-sm mt-1">รวมรวบตัวเลขเพื่อประเมินตามหลักศาสนาอิสลาม (ครอบคลุมบิทคอยน์ เหมาะสำหรับผู้ที่ต้องการจ่ายซะกาตด้วยบิทคอยน์)</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-stone-700 mb-1">2. เงินสด (ในบัญชี/มือ/ทุกสกุลเงิน)</label>
+                        <label class="block text-sm font-medium text-stone-700 mb-1">2. เงินสด (ในบัญชี/ในมือ/ทุกสกุลเงิน)</label>
                         <div class="flex gap-2">
                             <div class="input-group flex-1 mb-0">
                                 <i class="fa-solid fa-money-bill-wave"></i>
@@ -238,23 +238,23 @@
 
                 <div class="bg-stone-100 p-4 rounded-xl border border-stone-200">
                     <button id="toggleSettingsBtn" class="w-full flex justify-between items-center font-bold text-stone-700 focus:outline-none">
-                        <span><i class="fa-solid fa-sliders mr-2"></i> ตั้งค่าราคาและเกณฑ์นิศอบ</span>
+                        <span><i class="fa-solid fa-sliders mr-2"></i> กรุณาตั้งค่าราคาบิทคอยน์และเกณฑ์นิศอบเทียบเงินบาท ณ ราคาปัจจุบัน </span>
                         <i id="settingsIcon" class="fa-solid fa-chevron-down transition-transform"></i>
                     </button>
                     
                     <div id="settingsPanel" class="mt-4 hidden space-y-3 pt-3 border-t border-stone-300">
                         <div>
-                            <label class="block text-xs font-medium text-stone-600 mb-1">ราคา Bitcoin ปัจจุบัน (THB)</label>
-                            <input type="number" id="cfgBtcPrice" class="w-full p-2 text-sm border rounded" value="2171229.30">
+                            <label class="block text-xs font-medium text-stone-600 mb-1">กรุณาใส่ราคา Bitcoin ปัจจุบัน (THB) (google search / btc to thb)</label>
+                            <input type="number" id="cfgBtcPrice" class="w-full p-2 text-sm border rounded" value="0.0">
                         </div>
                         <div>
-                            <label class="block text-xs font-medium text-stone-600 mb-1">ราคานิศอบทองคำ 85 กรัม (THB)</label>
-                            <input type="number" id="cfgNisabGold" class="w-full p-2 text-sm border rounded" value="415248.94">
+                            <label class="block text-xs font-medium text-stone-600 mb-1">ราคานิศอบทองคำ 85 กรัม (THB) (ราคารับซื้อทองคำแท่งไทย 1บาท วันนี้ x น้ำหนัก 5.58บาท)</label>
+                            <input type="number" id="cfgNisabGold" class="w-full p-2 text-sm border rounded" value="0.0">
                         </div>
                         <div>
-                            <label class="block text-xs font-medium text-stone-600 mb-1">ราคานิศอบแร่เงิน (THB)</label>
+                            <label class="block text-xs font-medium text-stone-600 mb-1">ราคานิศอบแร่เงิน (ราคารับซื้อเงินแท่งไทย 1กก. วันนี้ x น้ำหนัก 0.595 หรือ 0.61236 กรัม)(THB)</label>
                             <div class="flex gap-2">
-                                <input type="number" id="cfgNisabSilver" class="w-full p-2 text-sm border rounded" value="46617.40">
+                                <input type="number" id="cfgNisabSilver" class="w-full p-2 text-sm border rounded" value="0.0">
                                 <select id="cfgSilverType" class="p-2 text-sm border rounded bg-white w-24">
                                     <option value="595">595 กรัม</option>
                                     <option value="612.36">612.36 กรัม</option>
@@ -322,10 +322,10 @@
                         ช่องทาง จ่ายบิทคอยน์ ให้ YBTC เป็นผู้จัดการซะกาต (YBTC Zakat Addresses)
                     </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <!-- On-chain (Updated with Primal Address) -->
+                        <!-- On-chain (Updated Address) -->
                         <div class="bg-stone-700/50 p-4 rounded-xl border border-stone-600">
                             <div class="flex justify-between items-center mb-1">
-                                <span class="text-[10px] text-accent font-bold uppercase">On-chain (Primal)</span>
+                                <span class="text-[10px] text-accent font-bold uppercase">On-chain </span>
                                 <i class="fa-solid fa-link text-[10px] text-stone-400"></i>
                             </div>
                             <code class="text-xs font-mono block bg-stone-900/50 p-2 rounded mb-3 truncate">bc1qj73j3l2539h2f9v6tqreuevsl5p728cl03qg9u</code>
@@ -343,7 +343,7 @@
                             </button>
                         </div>
                     </div>
-                    <p class="text-[10px] text-stone-400 mt-4 italic">* ตรวจสอบ Address ทุกครั้งก่อนทำการโอนทรัพย์สิน</p>
+                    <p class="text-[10px] text-stone-400 mt-4 italic">* ตรวจสอบ Address ในเพจ YBTU ทุกครั้งก่อนทำการโอนทรัพย์สิน</p>
                 </div>
             </div>
         </div>
@@ -427,7 +427,7 @@
                         <p class="text-xs text-stone-500 font-bold uppercase">ยอดที่ควรชำระ (อ้างอิงเกณฑ์ที่ต่ำกว่า)</p>
                         <p class="text-3xl font-bold text-primary" id="modalAmt">0.00 THB</p>
                     </div>
-                    <p class="text-xs text-stone-400 leading-snug">หมายเหตุ: แอปพลิเคชันนี้เป็นเพียงเครื่องมือช่วยคำนวณเพื่อความสะดวก ท่านสามารถนำตัวเลขนี้ไปบริจาคผ่านช่องทางศาสนาที่ท่านศรัทธาได้ทันที</p>
+                    <p class="text-xs text-stone-400 leading-snug">หมายเหตุ: แอปพลิเคชันนี้เป็นเพียงเครื่องมือช่วยคำนวณเพื่อความสะดวก ท่านสามารถนำตัวเลขนี้ไปบริจาคผ่านช่องทางศาสนาที่ท่านศรัทธาได้ตามสะดวก</p>
                 </div>
                 <div class="flex justify-end pt-2">
                     <button onclick="closeModal()" class="px-6 py-2 bg-primary text-white font-bold rounded-lg hover:bg-green-900 transition-colors">รับทราบและปิดหน้าต่าง</button>
